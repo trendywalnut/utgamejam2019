@@ -7,11 +7,14 @@ public class Movement : MonoBehaviour
 
     public float mySpeed;
     public float myJumpForce;
+
     private bool jump;
+
     private Rigidbody2D myRigidBody;
     private Collider2D myCollider;
     private SpriteRenderer mySpriteRenderer;
     private Animator myAnimator;
+    public AudioSource jumpSound;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +38,7 @@ public class Movement : MonoBehaviour
             if(jump)
             {
                 myAnimator.Play("PlayerRun");
+                
             }
         }
         else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
@@ -57,10 +61,12 @@ public class Movement : MonoBehaviour
 
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && jump)
         {
-            myAnimator.Play("PlayerJump");
+            myAnimator.Play("PlayerJump3");
+            jumpSound.Play();
             myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, myJumpForce);
             jump = false;
         }
+        
     }
 
     //after collision allows alien to jump again
