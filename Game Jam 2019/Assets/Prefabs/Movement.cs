@@ -30,20 +30,34 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             //makes sprite face the right direction and plays animation
-            myAnimator.Play("PlayerRun");
             mySpriteRenderer.flipX = false;
             myRigidBody.velocity = new Vector2(-mySpeed, myRigidBody.velocity.y);
+            if(jump)
+            {
+                myAnimator.Play("PlayerRun");
+            }
         }
-        //if moving right
-        if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             //makes sprite face the right direction and plays animation
-            myAnimator.Play("PlayerRun");
             mySpriteRenderer.flipX = true;
             myRigidBody.velocity = new Vector2(mySpeed, myRigidBody.velocity.y);
+            if (jump)
+            {
+                myAnimator.Play("PlayerRun");
+            }
         }
-        //if jumping
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && jump) {
+        else
+        {
+            if(jump)
+            {
+                myAnimator.Play("PlayerIdle");
+            }
+        }
+
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && jump)
+        {
+            myAnimator.Play("PlayerJump");
             myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, myJumpForce);
             jump = false;
         }
