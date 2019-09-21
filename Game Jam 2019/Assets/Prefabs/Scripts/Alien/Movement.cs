@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
-        myCollider = GetComponent<CapsuleCollider2D>();
+        myCollider = GetComponent<BoxCollider2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         myAnimator = GetComponent<Animator>();
         jump = true;
@@ -72,7 +72,7 @@ public class Movement : MonoBehaviour
     //after collision allows alien to jump again
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //myAnimator.Play("PlayerIdle");
+        myAnimator.Play("PlayerIdle");
         jump = true;
     }
 }
