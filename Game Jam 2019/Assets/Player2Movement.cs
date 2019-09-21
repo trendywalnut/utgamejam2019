@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class Player2Movement : MonoBehaviour
 {
 
     public float mySpeed;
     public float myJumpForce;
+    //float jumpCount = 0;
+    bool canDouble = true;
 
     private bool jump;
 
@@ -35,10 +37,10 @@ public class Movement : MonoBehaviour
             //makes sprite face the right direction and plays animation
             mySpriteRenderer.flipX = false;
             myRigidBody.velocity = new Vector2(-mySpeed, myRigidBody.velocity.y);
-            if(jump)
+            if (jump)
             {
-                myAnimator.Play("PlayerRun");
-                
+                myAnimator.Play("Player2Run");
+
             }
         }
         else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
@@ -48,31 +50,38 @@ public class Movement : MonoBehaviour
             myRigidBody.velocity = new Vector2(mySpeed, myRigidBody.velocity.y);
             if (jump)
             {
-                myAnimator.Play("PlayerRun");
+                myAnimator.Play("Player2Run");
             }
         }
         else
         {
-            if(jump)
+            if (jump)
             {
-                myAnimator.Play("PlayerIdle");
+                myAnimator.Play("Player2Idle");
             }
         }
 
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && jump)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)))
         {
-            myAnimator.Play("PlayerJump3");
-            jumpSound.Play();
-            myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, myJumpForce);
-            jump = false;
+            if(jump)
+            {
+                myAnimator.Play("Player2Jump");
+                //jumpSound.Play();
+                myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, myJumpForce);
+                canDouble = true;
+                jump = false;
+            }else if (canDouble)
+            {
+                canDouble = false;
+                myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, myJumpForce);
+            }
         }
-        
+
     }
 
     //after collision allows alien to jump again
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //myAnimator.Play("PlayerIdle");
         jump = true;
     }
 }
