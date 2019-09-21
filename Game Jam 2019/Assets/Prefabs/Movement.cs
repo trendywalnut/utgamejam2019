@@ -57,10 +57,11 @@ public class Movement : MonoBehaviour
 
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && jump)
         {
-            myAnimator.Play("PlayerJump");
+            myAnimator.Play("PlayerJump3");
             myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, myJumpForce);
             jump = false;
         }
+        
     }
 
     //after collision allows alien to jump again
