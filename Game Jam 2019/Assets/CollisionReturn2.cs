@@ -14,14 +14,14 @@ public class CollisionReturn2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-   
+
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.Return))
+        if(collision.gameObject.tag.Equals("Player") && Input.GetKeyDown(KeyCode.Return))
         {
-            SceneManager.LoadScene("Level 3");
+            SceneManager.LoadScene("Scene 3");
         }
     }
 }

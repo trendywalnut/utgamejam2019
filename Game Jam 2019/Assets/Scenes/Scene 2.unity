@@ -226,7 +226,7 @@ PrefabInstance:
     - target: {fileID: 7711500242634054386, guid: c5702963f0f329f44bf5a0645b94a75a,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7711500242634054391, guid: c5702963f0f329f44bf5a0645b94a75a,
         type: 3}
@@ -19390,7 +19390,7 @@ PrefabInstance:
     - target: {fileID: 7926791223050170409, guid: 61e3bde61605b2247966badeb9208a66,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.49
+      value: 39.92
       objectReference: {fileID: 0}
     - target: {fileID: 7926791223050170409, guid: 61e3bde61605b2247966badeb9208a66,
         type: 3}

@@ -19,7 +19,7 @@ public class CollisionEngineFinal : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.Return))
+        if(collision.gameObject.tag.Equals("Player") && Input.GetKeyDown(KeyCode.Return))
         {
             SceneManager.LoadScene("Outro");
         }
