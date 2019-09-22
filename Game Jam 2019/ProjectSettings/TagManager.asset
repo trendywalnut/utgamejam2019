@@ -39,6 +39,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: tree
+    uniqueID: 1019508741
+    locked: 0
   - name: Background
     uniqueID: 414823045
     locked: 0
