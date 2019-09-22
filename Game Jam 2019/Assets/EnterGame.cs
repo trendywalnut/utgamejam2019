@@ -16,15 +16,15 @@ public class EnterGame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene(1);
-        }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
+            SceneManager.LoadScene("Intro");
         }
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            
+            SceneManager.LoadScene("Credits");
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Application.Quit();
         }
     }
 }

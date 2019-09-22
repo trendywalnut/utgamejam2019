@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 5799694439602313717}
   - component: {fileID: 488233760}
   - component: {fileID: 2429347626994243862}
+  - component: {fileID: 114839243796256660}
   m_Layer: 0
   m_Name: Alien
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,3 +155,15 @@ MonoBehaviour:
   mySpeed: 8
   myJumpForce: 40
   jumpSound: {fileID: 0}
+--- !u!114 &114839243796256660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5799694439602313720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 909adf07af88d4a359cc093afc95833a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

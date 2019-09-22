@@ -3,22 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Cinematic : MonoBehaviour
+public class CollisionReturn : MonoBehaviour
 {
-    private Animator myAnimator;
     // Start is called before the first frame update
     void Start()
     {
-        myAnimator = GetComponent<Animator>();
-        myAnimator.Play("StoryBoard");
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+     
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Player") && Input.GetKeyDown(KeyCode.Return))
         {
-            SceneManager.LoadScene("Scene 1");
+            SceneManager.LoadScene("Scene 2");
         }
     }
 }
