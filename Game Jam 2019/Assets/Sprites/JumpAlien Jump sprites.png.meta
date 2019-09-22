@@ -7,6 +7,10 @@ TextureImporter:
     21300004: JumpAlien Jump sprites_2
     21300006: JumpAlien Jump sprites_3
     21300008: JumpAlien Jump sprites_4
+    21300010: JumpAlien Jump sprites_5
+    21300012: JumpAlien Jump sprites_6
+    21300014: JumpAlien Jump sprites_7
+    21300016: JumpAlien Jump sprites_8
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -125,7 +129,7 @@ TextureImporter:
       name: JumpAlien Jump sprites_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 7
         y: 0
         width: 34
         height: 61
@@ -136,7 +140,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff3e24ce8d083734f89108bb2fe4ffe5
+      spriteID: b5aa6e2353063df48972a6d5bb3c06dd
       vertices: []
       indices: 
       edges: []
@@ -145,7 +149,7 @@ TextureImporter:
       name: JumpAlien Jump sprites_1
       rect:
         serializedVersion: 2
-        x: 37
+        x: 49
         y: 0
         width: 34
         height: 57
@@ -156,7 +160,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 774bfe8653e7109499a40ae279346557
+      spriteID: 99411ffdd617e9b46a8b4dd3651aa231
       vertices: []
       indices: 
       edges: []
@@ -165,7 +169,7 @@ TextureImporter:
       name: JumpAlien Jump sprites_2
       rect:
         serializedVersion: 2
-        x: 75
+        x: 96
         y: 0
         width: 35
         height: 49
@@ -176,7 +180,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ada57021545215a4ba3d12acfab53cc6
+      spriteID: e433c74218c07cf4292648eee302ff8d
       vertices: []
       indices: 
       edges: []
@@ -185,7 +189,7 @@ TextureImporter:
       name: JumpAlien Jump sprites_3
       rect:
         serializedVersion: 2
-        x: 118
+        x: 153
         y: 0
         width: 35
         height: 45
@@ -196,7 +200,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a84d8d3b83fbe9d4db7a1518709c36e4
+      spriteID: 094c02bccb776784bbbc815af0b6ec47
       vertices: []
       indices: 
       edges: []
@@ -205,7 +209,7 @@ TextureImporter:
       name: JumpAlien Jump sprites_4
       rect:
         serializedVersion: 2
-        x: 156
+        x: 207
         y: 2
         width: 31
         height: 62
@@ -216,7 +220,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1e18139777759a4a8588cd1a9fe658b
+      spriteID: 535507b82742e7140b3d970253706fd2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpAlien Jump sprites_7
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 0
+        width: 35
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa62814acf8159f4f9a0897b877e2185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpAlien Jump sprites_8
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 0
+        width: 35
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e731d8a539a5e46a3c79d27e58203d
       vertices: []
       indices: 
       edges: []

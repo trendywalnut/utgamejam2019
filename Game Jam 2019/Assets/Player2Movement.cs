@@ -72,6 +72,7 @@ public class Player2Movement : MonoBehaviour
                 jump = false;
             }else if (canDouble)
             {
+                myAnimator.Play("Player2Jump");
                 canDouble = false;
                 myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, myJumpForce);
             }
