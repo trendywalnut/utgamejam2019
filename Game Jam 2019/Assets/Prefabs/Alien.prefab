@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5799694439602313716}
   - component: {fileID: 95392435212536260}
   - component: {fileID: 5799694439602313717}
-  - component: {fileID: 5799694439602313719}
   - component: {fileID: 488233760}
+  - component: {fileID: 2429347626994243862}
   m_Layer: 0
   m_Name: Alien
   m_TagString: Untagged
@@ -118,25 +118,11 @@ Rigidbody2D:
   m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 10
-  m_Material: {fileID: 6200000, guid: af64d8f6731aedf47b8cc4a88e400fdd, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &5799694439602313719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5799694439602313720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b85641625bda9ca41b382d2b6ca1bcba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mySpeed: 8
-  myJumpForce: 40
 --- !u!70 &488233760
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -153,3 +139,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.305}
   m_Size: {x: 0.34, y: 0.61}
   m_Direction: 0
+--- !u!114 &2429347626994243862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5799694439602313720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648cc464e722648438c5b0ba9bd93ff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySpeed: 8
+  myJumpForce: 40
+  jumpSound: {fileID: 0}
