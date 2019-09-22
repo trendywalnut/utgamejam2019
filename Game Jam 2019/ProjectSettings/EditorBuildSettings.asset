@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Connor's Scene yuh.unity
     guid: a4a59006f20a1fa43a4fe051bc6a3bc9
+  - enabled: 1
+    path: Assets/Scenes/OutroS.unity
+    guid: ececefa05654244469deeef7d4afe46c
   m_configObjects: {}
