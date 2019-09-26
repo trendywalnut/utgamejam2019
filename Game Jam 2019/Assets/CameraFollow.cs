@@ -15,5 +15,9 @@ public class CameraFollow : MonoBehaviour
     void FixedUpdate()
     {
         transform.position = new Vector3(playerAlien.position.x, playerAlien.position.y, transform.position.z);
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Application.Quit();
+        }
     }
 }

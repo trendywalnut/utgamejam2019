@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class CollisionReturn : MonoBehaviour
 {
-    AudioSource myAudioSource;
+    int sceneIndex;
     // Start is called before the first frame update
     void Start()
     {
-
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
     // Update is called once per frame
@@ -22,7 +22,8 @@ public class CollisionReturn : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Player") && Input.GetKeyDown(KeyCode.Return))
         {
-            SceneManager.LoadScene("Scene 2");
+            sceneIndex = sceneIndex + 1;
+            SceneManager.LoadScene(sceneIndex);
         }
     }
 }
