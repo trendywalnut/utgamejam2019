@@ -11,12 +11,7 @@ public class Respawn : MonoBehaviour
         startingPosition = transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    //if the player collides with a deathbox (marked by spikes), resets the player's position to the initial position
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Hurt Box")

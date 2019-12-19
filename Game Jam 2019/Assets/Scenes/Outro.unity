@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 1323648052}
   - component: {fileID: 1323648056}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: OutroBoard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,7 +224,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4fed9db0f85f2ec4db35feb3fc2da5b0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 93573acd8e6ee4e4593287ba3ac4c66f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

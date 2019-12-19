@@ -4,74 +4,78 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    //parameters that can be entered from the inspector window to allow for fine-tuning
     public float mySpeed;
     public float myJumpForce;
 
-    private bool jump;
+    //true if the player is on the ground
+    private bool canJump;
 
+    //componenets to manipulate the gameobject within this script
     private Rigidbody2D myRigidBody;
     private Collider2D myCollider;
     private SpriteRenderer mySpriteRenderer;
     private Animator myAnimator;
     public AudioSource jumpSound;
 
-    // Start is called before the first frame update
+    //retrieve the components and allow player to jump (gameobject is initialized on the ground)
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         myCollider = GetComponent<CapsuleCollider2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         myAnimator = GetComponent<Animator>();
-        jump = true;
+        canJump = true;
     }
 
-    // Update is called once per frame
+    //update is called once per frame
     void Update()
     {
-        //if moving left
+        //moving left
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            //makes sprite face the right direction and plays animation
+            //flips sprite to be facing left and applies a vector for leftward movement
             mySpriteRenderer.flipX = false;
             myRigidBody.velocity = new Vector2(-mySpeed, myRigidBody.velocity.y);
-            if (jump)
+            //if the player is not currently in the air play running animation
+            if (canJump)
             {
                 myAnimator.Play("PlayerRun");
 
             }
         }
+        //moving right
         else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            //makes sprite face the right direction and plays animation
+            //flips sprite to be facing right and applies a vector for rightward movement
             mySpriteRenderer.flipX = true;
             myRigidBody.velocity = new Vector2(mySpeed, myRigidBody.velocity.y);
-            if (jump)
+            //if the player is not currently in the air play running animation
+            if (canJump)
             {
                 myAnimator.Play("PlayerRun");
             }
         }
-        else
+        //no directional input is given, but if the player is not currently in the air play idle animation
+        else if (canJump)
         {
-            if (jump)
-            {
-                myAnimator.Play("PlayerIdle");
-            }
+            myAnimator.Play("PlayerIdle");
         }
 
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && jump)
+        //separate check to see if user wants to jump
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && canJump)
         {
-
+            //plays animation and adds vector for upward movement (fall affected by gravity)
             myAnimator.Play("PlayerJump3");
             //jumpSound.Play();
             myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, myJumpForce);
-            jump = false;
-
+            //makes sure the user cannot infinitely jump
+            canJump = false;
         }
     }
-    //after collision allows alien to jump again
+    //after collision (with the ground) allows alien to jump again
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        jump = true;
+        canJump = true;
     }
 }

@@ -122,8 +122,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1563428993}
   - component: {fileID: 1563428992}
-  - component: {fileID: 1563428991}
   - component: {fileID: 1563428994}
+  - component: {fileID: 1563428991}
   m_Layer: 0
   m_Name: CreditController
   m_TagString: Untagged
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1563428990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37a2eaaa1c350244696c6fd89da40457, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b2c69468e04c4e4797aab93f22644b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &1563428992

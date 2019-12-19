@@ -5,20 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class Cinematic : MonoBehaviour
 {
+    private int sceneIndex;
     private Animator myAnimator;
-    // Start is called before the first frame update
+
+    //gets component and begins playing the cinematic animation
+    //gets current scene index
     void Start()
     {
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
         myAnimator = GetComponent<Animator>();
         myAnimator.Play("StoryBoard");
     }
 
-    // Update is called once per frame
+    //if space is pressed at all during the animation advances to the next scene by way of its scene index
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene("Scene 1");
+            sceneIndex++;
+            SceneManager.LoadScene(sceneIndex);
         }
     }
 }

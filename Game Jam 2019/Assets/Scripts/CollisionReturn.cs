@@ -6,23 +6,19 @@ using UnityEngine.SceneManagement;
 public class CollisionReturn : MonoBehaviour
 {
     int sceneIndex;
-    // Start is called before the first frame update
+
+    //gets the current scene index
     void Start()
     {
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-     
-    }
-
+    //if the player collides with the part and presses return, load the next scene by way of its scene index
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag.Equals("Player") && Input.GetKeyDown(KeyCode.Return))
         {
-            sceneIndex = sceneIndex + 1;
+            sceneIndex++;
             SceneManager.LoadScene(sceneIndex);
         }
     }

@@ -5,13 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EnterGame : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    //loads different scenes/quits the game depending on if certain buttons are pressed while at the title screen
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))

@@ -5,13 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EnterVictoryScreen : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    //if space is pressed at all during the animation advances to the next scene
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))

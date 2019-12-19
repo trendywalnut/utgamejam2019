@@ -5,13 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class RestartGame : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    //load title screen if return is pressed
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
